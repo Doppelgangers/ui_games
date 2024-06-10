@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="Python 3.11 (fast_api)" />
+    <option name="sdkName" value="Poetry (ui_games)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (ui_games) (2)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (ui_games)" project-jdk-type="Python SDK" />
 </project>
