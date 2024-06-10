@@ -42,7 +42,8 @@ SERVICE_APPS: list[str] =  [
 APPS_PREFIX = 'apps'
 
 PROJECT_APPS: list[str] = [
-    'apps.core'
+    'apps.core',
+    'apps.tic_tac_toe',
 ]
 
 INSTALLED_APPS = SERVICE_APPS + PROJECT_APPS

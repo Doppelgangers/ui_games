@@ -1,8 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views import View
+
 
 # Create your views here.
 
+class MainPage(View):
 
-def index(request) -> HttpResponse:
-    return render(request, 'core/index.html')
+    def get(self, request) -> HttpResponse:
+        return render(request, 'core/index.html')
+
