@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include('apps.core.urls')),
     path('ttt', include('apps.tic_tac_toe.urls')),
     # path('pocker', include('apps.core.urls')),
-
+    path('profile/', include('apps.users.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
