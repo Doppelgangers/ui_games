@@ -1,0 +1,13 @@
+{% include 'base.html' %}
+
+
+{% block content %}
+    <h3>Создание комнаты</h3>
+    <form action="{% url 'ttt_create_room' %}" , method="post" , enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Создать</button>
+    </form>
+
+{% endblock %}
+
