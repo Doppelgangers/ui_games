@@ -45,6 +45,7 @@ APPS_PREFIX = 'apps'
 PROJECT_APPS: list[str] = [
     'apps.core',
     'apps.tic_tac_toe',
+    'apps.users'
 ]
 
 INSTALLED_APPS = SERVICE_APPS + PROJECT_APPS
@@ -133,4 +134,4 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = reverse_lazy("users:login")
+LOGIN_REDIRECT_URL = reverse_lazy("homepage")
