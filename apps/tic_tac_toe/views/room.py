@@ -1,8 +1,16 @@
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.urls.base import reverse
 from django.views import View
 
 from ..forms.room import CreateRoom
+from ..models import Room
+
+
+class GameRoomView(View):
+    def get(self, request: HttpRequest, id_room: int) -> HttpResponse:
+        room: Room | None = Room.objects.get(pk=id_room)
+        return HttpResponse(f"Game {room.name}!")
 
 
 class CreateRoomView(View):
@@ -17,6 +25,5 @@ class CreateRoomView(View):
     def post(self, request: HttpRequest) -> HttpResponse:
         form: CreateRoom = CreateRoom(request.POST)
         if form.is_valid():
-            form.save()
-            return HttpResponse(f"created {request.POST}")
-
+            room: Room = form.save()
+            return HttpResponseRedirect(reverse('ttt_game', args=(room.pk,)))
