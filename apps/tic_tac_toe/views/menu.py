@@ -5,7 +5,7 @@ from django.views import View
 
 # Create your views here.
 
-class TickTacToeMenu(View):
+class Menu(View):
 
     def get(self, request) -> HttpResponse:
         return render(request, 'tic_tac_toe/index.html')
