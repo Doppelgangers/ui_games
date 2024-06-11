@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('apps.core.urls')),
     path('ttt', include('apps.tic_tac_toe.urls')),
     # path('pocker', include('apps.core.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
